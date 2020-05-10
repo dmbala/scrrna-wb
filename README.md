@@ -1,15 +1,15 @@
 Repo for building an interactive workbench for scRNA analysis. The interactive workbench is built with Open OnDemand service. The analysis are performed with cellranger pipeline and scanpy.
 
 * Jobwrappers (contains job wraper script to run cellranger and jupyter scanpy notebook)
-** cellranger_aggr.sh    
-** cellranger_bcl2count.sh
-** cellranger_mkfastq.sh
-** scanpy-scrna-analysis.ipynb
+  * cellranger_aggr.sh    
+  * cellranger_bcl2count.sh
+  * cellranger_mkfastq.sh
+  * scanpy-scrna-analysis.ipynb
 
 * OOD_app (OOD app that presents three web forms on the dashboard)
-** cellranger_aggr
-** cellranger_bcl2count
-** cellranger_bcl2fastq
+  * cellranger_aggr
+  * cellranger_bcl2count
+  * cellranger_bcl2fastq
 
 
 ============================================
