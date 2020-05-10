@@ -3,7 +3,7 @@ Repo for building an interactive workbench for scRNA analysis. The interactive w
 
 <img src="https://github.com/dmbala/scrrna-wb/blob/master/Figs/scrna-infrastructure-1.jpg">
 [Workbench model for scRNA analysis ](https://github.com/dmbala/scrrna-wb/blob/master/Figs/scrna-infrastructure-1.jpg)
-<img src="https://github.com/dmbala/scrrna-wb/blob/master/Figs/scrna-infrastructure-1.jpg">
+<img src="https://github.com/dmbala/scrrna-wb/blob/master/Figs/scrna-infrastructure-4a.jpg">
 [Workflow for scRNA analysis ](https://github.com/dmbala/scrrna-wb/blob/master/Figs/scrna-infrastructure-4a.jpg)
 
 
