@@ -1,3 +1,5 @@
+# Building an Interactive Workbench for Single Cell Genomics 
+
 Repo for building an interactive workbench for scRNA analysis. The interactive workbench is built with Open OnDemand service. The analysis are performed with cellranger pipeline and scanpy.
 
 * Jobwrappers (contains job wraper script to run cellranger and jupyter scanpy notebook)
