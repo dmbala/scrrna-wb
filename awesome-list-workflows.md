@@ -4,7 +4,13 @@ List of Scientific  Workflow Management Systems
 
 
 See here:  https://github.com/pditommaso/awesome-pipeline, https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems
+.. |ss| raw:: html
 
+   <strike>
+
+.. |se| raw:: html
+
+   </strike>
 
 #. Apache Airflow https://github.com/apache/airflow
 #. NextFlow http://nextflow.io
