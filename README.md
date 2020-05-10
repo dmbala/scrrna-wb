@@ -1,9 +1,7 @@
 # Building an Interactive Workbench for Single Cell Genomics 
 
-[Alt text]()
-<img src="">
-Result
-https://github.com/dmbala/scrrna-wb/blob/master/Figs/scrna-infrastructure-1.svg
+[Alt text](https://github.com/dmbala/scrrna-wb/blob/master/Figs/scrna-infrastructure-1.jpg)
+<img src="https://github.com/dmbala/scrrna-wb/blob/master/Figs/scrna-infrastructure-1.jpg">
 
 Repo for building an interactive workbench for scRNA analysis. The interactive workbench is built with Open OnDemand service. The analysis are performed with cellranger pipeline and scanpy.
 
