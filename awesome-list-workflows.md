@@ -21,7 +21,6 @@ See here:  https://github.com/pditommaso/awesome-pipeline, https://github.com/co
 * SHIWA https://www.shiwa-workflow.eu/
 * Apache Oozie https://oozie.apache.org/
 * DNANexus https://wiki.dnanexus.com/API-Specification-v1.0.0/IO-and-Run-Specifications https://wiki.dnanexus.com/API-Specification-v1.0.0/Workflows-and-Analyses
-* ~~BioDT~~ http://www.biodatomics.com/ (dead link)
 * Agave http://agaveapi.co/live-docs/
 * DiscoveryEnvironment http://www.iplantcollaborative.org/ci/discovery-environment
 * Wings http://www.wings-workflows.org/
