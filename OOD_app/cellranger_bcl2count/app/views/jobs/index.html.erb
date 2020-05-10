@@ -1,0 +1,82 @@
+<h1 class="display-4 my-2">
+  My Batch Jobs
+  <span class="float-right">
+    <%=
+      link_to(
+        icon("fas", "plus", "New Batch Job"),
+        new_job_path,
+        class: "btn btn-secondary"
+      )
+    %>
+  </span>
+</h1>
+
+
+<table class="table">
+  <caption>
+    Last updated <%= DateTime.now.strftime("%b %e %I:%M:%S%p %Z") %>
+  </caption>
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Project</th>
+      <th scope="col">jobTime</th>
+      <th scope="col">bclDirectory</th>
+      <th scope="col">idName </th>
+      <th scope="col">sampleChem </th>
+      <th scope="col">refGenome </th>
+      <th scope="col">scratchDir </th>
+      <th scope="col">outputDataDir </th>
+      <th colspan="7" scope="col"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+      <tr>
+        <td scope="row"><%= job.project %></td>
+        <td scope="row"><%= job.jobTime %></td>
+        <td scope="row"><%= job.bclDirectory %></td>
+        <td scope="row"><%= job.idName %></td>
+        <th scope="col">sampleChem </th>
+       <th scope="col">refGenome </th>
+        <td scope="row"><%= job.scratchDir %></td>
+        <td scope="row"><%= job.outputDataDir %></td>
+        <td scope="row">
+          <span class="badge badge-<%= job.status_color %> w-100">
+            <%= job.status_title %>
+          </span>
+        </td>
+        <td scope="row"><%= link_to "Show", job %></td>
+        <td scope="row"><%= link_to "Edit", edit_job_path(job) %></td>
+        <td scope="row"><%= link_to_if !job.submitted?, "Stage", stage_job_path(job), method: :patch %></td>
+        <td scope="row"><%= link_to_if job.staged?, "Files", job.files_url, target: "_blank" %></td>
+        <td scope="row">
+          <%=
+            link_to(icon("fas", "play", "Submit"), submit_job_path(job),
+              class: "btn btn-secondary btn-sm#{ " disabled" if !job.staged? || job.submitted?}",
+              method: :patch
+            )
+          %>
+        </td>
+        <td scope="row">
+          <%=
+            link_to(icon("fas", "stop", "Stop"), stop_job_path(job),
+              class: "btn btn-danger btn-sm#{ " disabled" unless job.submitted?}",
+              method: :patch,
+              data: { confirm: 'Are you sure?' }
+            )
+          %>
+        </td>
+        <td scope="row">
+          <%=
+            link_to(icon("fas", "trash", "Delete"), job,
+              class: "btn btn-danger btn-sm",
+              method: :delete,
+              data: { confirm: 'Are you sure?' }
+            )
+          %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

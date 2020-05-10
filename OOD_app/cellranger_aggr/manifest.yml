@@ -1,0 +1,6 @@
+name: cellranger-aggr
+category: Interactive Apps
+icon: fa://gear
+description: |
+  Cellranger pipeline to run aggr on multiple samples 
+

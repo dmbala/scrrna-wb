@@ -1,0 +1,65 @@
+<div class="row justify-content-start">
+  <div class="col-6">
+    <%= form_for(@job) do |f| %>
+      <div class="form-group">
+        <%= f.label :project %><br>
+        <%= f.text_field :project, class: "form-control", "aria-describedby" => "projectHelpBlock" %>
+        <small id="projectHelpBlock" class="form-text text-muted">
+          Project to be charged against (Partition name)
+        </small>
+      </div>
+      <div class="form-group">
+        <%= f.label :jobTime %><br>
+        <%= f.text_field :jobTime, class: "form-control" %>
+        <small id="jobTime" class="form-text text-muted">
+          Provide maximum time for the job (e.g. 7-00:00:00)
+        </small>
+      </div>
+      <div class="form-group">
+        <%= f.label :idName %><br>
+        <%= f.text_field :idName, class: "form-control" %>
+       <small id="idnameBlock" class="form-text text-muted">
+          Provide a uniqe ID. This is a name (character string) to identify your jobs
+        </small>
+      </div>
+      <div class="form-group">
+        <%= f.label :sampleCsvFile %><br>
+        <%= f.text_field :sampleCsvFile, class: "form-control" %>
+       <small id="samplecsvBlock" class="form-text text-muted">
+          Provide a csv file that has information about sample, lane and index
+        </small>
+      </div>
+      <div class="form-group">
+        <%= f.label :normOption%><br>
+        <%= f.text_field :normOption, class: "form-control" %>
+       <small id="normOptionBlock" class="form-text text-muted">
+          Provide normalization option, either mapped or none
+        </small>
+      </div>
+      <div class="form-group">
+        <%= f.label :scratchDir  %><br>
+        <%= f.text_field :scratchDir, class: "form-control"%>
+       <small id="scratchDirBlock" class="form-text text-muted">
+          Absolute path to run your job 
+        </small>
+      </div>
+      <div class="form-group">
+        <%= f.label :outputDataDir  %><br>
+        <%= f.text_field :outputDataDir, class: "form-control"%>
+       <small id="OutputDirBlock" class="form-text text-muted">
+          Absolute path to copy the data after job completion (typically your project space) 
+        </small>
+      </div>
+      <div class="form-group">
+        <%= f.label :notes %><br>
+        <%= f.text_area :notes, class: "form-control" %>
+      </div>
+       <small id="notesBlock" class="form-text text-muted">
+          A breif description about the current job
+        </small>
+      <%= button_tag icon("fas", "save", "Save"), class: "btn btn-primary btn-block" %>
+    <% end %>
+  </div>
+</div>
+
+

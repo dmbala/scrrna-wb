@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --partition=<%=project%>
+#SBATCH --job-name=cellranger-job
+#SBATCH --ntasks=1                   # Run a single task        
+#SBATCH --cpus-per-task=24           # Number of CPU cores per task
+#SBATCH --time=<%=jobTime%> # old time 7-00:00:00 Total run time limit (HH:MM:SS)
+#SBATCH --mem=194GB
+#SBATCH --output=slurm.%N.%j.out     # STDOUT output file
+#SBATCH --error=slurm.%N.%j.err      # STDERR output file (optional)
+
+module load java
+module use /projects/community/modulefiles
+module load cellranger
+module load bcl2fastq
+
+/projects/oarc/users/scripts/CellRanger/cellranger_wrapper.sh <%= bclDirectory %> <%= sampleCsvFile %> <%=sampleChem %> <%=refGenome%> <%=idName%> <%=scratchDir%> <%=outputDataDir%> $SLURM_CPUS_PER_TASK

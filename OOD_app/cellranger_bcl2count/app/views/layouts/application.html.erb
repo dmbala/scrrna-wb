@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Batch Job App</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta name="turbolinks-root" content="<%= ENV["RAILS_RELATIVE_URL_ROOT"] %>">
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <header>
+    <%= render partial: "layouts/nav" %>
+  </header>
+  <div class="container" role="main">
+    <div class="mt-1">
+      <%= render partial: "layouts/flash", flash: flash %>
+    </div>
+    <%= yield %>
+  </div><!-- /.container -->
+</body>
+
+</html>
